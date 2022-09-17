@@ -7,6 +7,11 @@
 // Scripts
 // 
 
+let mail = document.body.querySelector('#Mail');
+document.addEventListener("click", () => {
+    console.log("hellO");
+})
+
 window.addEventListener('DOMContentLoaded', event => {
 
     // Navbar shrink function
