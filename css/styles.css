@@ -4626,6 +4626,10 @@ textarea.form-control-lg {
 .card-group > .card {
   margin-bottom: 0.75rem;
 }
+
+#skillCard {
+  margin-bottom: 3px;
+}
 @media (min-width: 576px) {
   .card-group {
     display: flex;
