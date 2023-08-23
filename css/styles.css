@@ -246,6 +246,11 @@ a {
   text-decoration: none;
 }
 
+.portfolioLinks {
+  text-decoration: underline;
+  color: darkcyan;
+}
+
 a:hover {
   color: #4f42b8;
 }

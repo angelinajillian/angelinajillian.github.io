@@ -13,7 +13,8 @@ document.addEventListener("click", () => {
 })
 
 window.addEventListener('DOMContentLoaded', event => {
-
+    $('.carousel').carousel()
+    
     // Navbar shrink function
     var navbarShrink = function () {
         const navbarCollapsible = document.body.querySelector('#mainNav');
