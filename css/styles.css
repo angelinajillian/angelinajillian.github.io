@@ -613,7 +613,7 @@ progress {
 
 .img-fluid {
   max-width: 100%;
-  height: auto;
+  height: 250px;
 }
 
 .img-thumbnail {
@@ -11469,6 +11469,7 @@ header.masthead .masthead-heading {
   max-width: 26rem;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 #portfolio .portfolio-item .portfolio-link {
   position: relative;
@@ -11503,6 +11504,7 @@ header.masthead .masthead-heading {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   margin-bottom: 0;
+  background-color: #fff;
 }
 #portfolio .portfolio-item .portfolio-caption .portfolio-caption-subheading {
   font-style: italic;
