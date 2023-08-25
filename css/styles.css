@@ -3804,6 +3804,12 @@ textarea.form-control-lg {
   display: block;
 }
 
+header{
+  /* background-color: #ececec; */
+  background-color: #dedada;
+  
+}
+
 .dropdown-header {
   display: block;
   padding: 0.5rem 1rem;
