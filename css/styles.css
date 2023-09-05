@@ -76,6 +76,24 @@
   }
 }
 
+/* My added stuff */
+@media(max-width: 545px) {
+  #jobTitles{
+    display: none;
+  }
+}
+#CLButton{
+  display: none;
+}
+@media(max-width: 498px) {
+  #CLButton{
+    display: block;
+  }
+  #coverLetterButton{
+    display: none;
+  }
+}
+
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
@@ -112,6 +130,7 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 h1, .h1 {
   font-size: calc(1.375rem + 1.5vw);
 }
+
 @media (min-width: 1200px) {
   h1, .h1 {
     font-size: 2.5rem;
@@ -120,6 +139,7 @@ h1, .h1 {
 
 h2, .h2 {
   font-size: calc(1.325rem + 0.9vw);
+  word-wrap: break-word;
 }
 @media (min-width: 1200px) {
   h2, .h2 {
@@ -11316,6 +11336,7 @@ html {
 body {
   position: relative;
   overflow-x: hidden;
+  width: 100%;
 }
 
 p {
