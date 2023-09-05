@@ -77,6 +77,15 @@
 }
 
 /* My added stuff */
+@media(max-width: 767px) {
+  #edinburgh{
+    margin-top: 20px;
+  }
+
+  #galileo{
+    margin-top: 20px;
+  }
+}
 @media(max-width: 545px) {
   #jobTitles{
     display: none;
