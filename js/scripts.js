@@ -7,6 +7,8 @@
 // Scripts
 // 
 
+// Nav bar shrink
+
 let mail = document.body.querySelector('#Mail');
 document.addEventListener("click", () => {
     console.log("hellO");
@@ -58,3 +60,79 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+// For typing effect
+
+document.addEventListener("DOMContentLoaded", function () {
+    const textArray = ["Product Developer", "Software Engineer", "Project Manager"];
+    const typingSpeed = 100; // Speed of typing
+    const erasingSpeed = 50; // Speed of erasing
+    const delayBetween = 1500; // Delay before erasing
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typingElement = document.getElementById("typingEffect");
+
+    function typeEffect() {
+        let currentText = textArray[textIndex];
+        if (isDeleting) {
+            typingElement.innerHTML = currentText.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            typingElement.innerHTML = currentText.substring(0, charIndex + 1);
+            charIndex++;
+        }
+
+        if (!isDeleting && charIndex === currentText.length) {
+            setTimeout(() => (isDeleting = true), delayBetween);
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            textIndex = (textIndex + 1) % textArray.length;
+        }
+
+        setTimeout(typeEffect, isDeleting ? erasingSpeed : typingSpeed);
+    }
+
+    typeEffect();
+});
+
+
+// Animation for underlining the headline
+// document.addEventListener("DOMContentLoaded", function () {
+//     const phrases = [
+//         "customer experiences", 
+//         "drive business impact", 
+//         "create products that lead to innovative solutions to real-world problems"
+//     ];
+
+//     let textIndex = 0;
+//     let charIndex = 0;
+//     let isDeleting = false;
+//     const typingElement = document.getElementById("dynamicText");
+
+//     function typeEffect() {
+//         let currentPhrase = phrases[textIndex];
+        
+//         if (isDeleting) {
+//             typingElement.innerHTML = currentPhrase.substring(0, charIndex - 1);
+//             charIndex--;
+//         } else {
+//             typingElement.innerHTML = currentPhrase.substring(0, charIndex + 1);
+//             charIndex++;
+//         }
+
+//         // Apply underline animation when text is fully typed
+//         if (!isDeleting && charIndex === currentPhrase.length) {
+//             typingElement.classList.add("animated");
+//             setTimeout(() => isDeleting = true, 1500); // Pause before deleting
+//         } else if (isDeleting && charIndex === 0) {
+//             typingElement.classList.remove("animated");
+//             isDeleting = false;
+//             textIndex = (textIndex + 1) % phrases.length; // Loop to next phrase
+//         }
+
+//         setTimeout(typeEffect, isDeleting ? 50 : 100); // Speed control
+//     }
+
+//     typeEffect();
+// });
